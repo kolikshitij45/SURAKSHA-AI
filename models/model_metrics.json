@@ -1,0 +1,58 @@
+{
+    "regressor": {
+        "model_type": "RandomForestRegressor",
+        "mae_meters": 0.6214,
+        "rmse_meters": 1.2452,
+        "r2_score": 0.6695
+    },
+    "classifier": {
+        "model_type": "GradientBoostingClassifier",
+        "accuracy": 0.9096,
+        "weighted_precision": 0.8722,
+        "weighted_recall": 0.9096,
+        "weighted_f1": 0.8823
+    },
+    "top_features": [
+        [
+            "water_level_m",
+            0.5727
+        ],
+        [
+            "api_soil_moisture",
+            0.0978
+        ],
+        [
+            "discharge_rolling_3d",
+            0.0401
+        ],
+        [
+            "rain_cum_3d_mm",
+            0.0308
+        ],
+        [
+            "temp_max_c",
+            0.0307
+        ]
+    ],
+    "features_list": [
+        "rainfall_imd_mm",
+        "temp_max_c",
+        "pressure_hpa",
+        "wind_speed_kmh",
+        "relative_humidity_pct",
+        "upstream_dam_outflow_cumec",
+        "discharge_cumec",
+        "water_level_m",
+        "api_soil_moisture",
+        "rain_lag1_mm",
+        "rain_lag2_mm",
+        "rain_cum_3d_mm",
+        "rain_cum_7d_mm",
+        "water_level_lag1_m",
+        "water_level_delta_24h",
+        "discharge_rolling_3d",
+        "dam_outflow_rolling_2d",
+        "pressure_drop_hpa",
+        "storm_wind_flag"
+    ]
+}

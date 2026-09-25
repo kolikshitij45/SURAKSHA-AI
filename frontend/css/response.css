@@ -1,0 +1,182 @@
+/* ==========================================================================
+   SURAKSHA-AI Response View Styles
+   ========================================================================== */
+
+.response-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Response Header Banner */
+.response-header-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  box-shadow: var(--card-shadow);
+}
+
+.response-lead-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.response-lead-sub {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+/* Directives Section */
+.directives-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.directive-card {
+  background-color: var(--bg-secondary);
+  border-left: 4px solid var(--color-brand);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 12px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.directive-number {
+  background-color: var(--bg-surface-elevated);
+  color: var(--color-brand);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.75rem;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.directive-content {
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  line-height: 1.45;
+}
+
+/* Dam Outflow Operational Card */
+.dam-grid-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.dam-metric-box {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.dam-metric-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.dam-metric-val {
+  font-size: 1.4rem;
+  font-weight: 800;
+  font-family: var(--font-mono);
+  color: var(--text-primary);
+  margin-top: 2px;
+}
+
+.dam-advisory-directive-box {
+  background-color: var(--bg-secondary);
+  border-left: 3px solid var(--color-brand);
+  padding: 12px 16px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+/* NDRF Response Card */
+.ndrf-standdown-box {
+  background-color: var(--bg-secondary);
+  border: 1px dashed var(--border-medium);
+  padding: 20px;
+  border-radius: var(--radius-sm);
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+}
+
+/* Shelter Overload Alert Badge */
+.shelter-status-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.status-adequate {
+  background: var(--hazard-normal-bg);
+  color: var(--hazard-normal);
+  border: 1px solid var(--hazard-normal-border);
+}
+
+.status-overload {
+  background: var(--hazard-severe-bg);
+  color: var(--hazard-severe);
+  border: 1px solid var(--hazard-severe-border);
+  animation: pulseWarn 2s infinite ease-in-out;
+}
+
+@keyframes pulseWarn {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.65; }
+}
+
+/* Progress bar for shelter capacity */
+.shelter-cap-bar-track {
+  width: 90px;
+  height: 6px;
+  background-color: var(--bg-secondary);
+  border-radius: 3px;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+  border: 1px solid var(--border-subtle);
+}
+
+.shelter-cap-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+}
+
+@media (max-width: 600px) {
+  .dam-grid-metrics {
+    grid-template-columns: 1fr;
+  }
+}

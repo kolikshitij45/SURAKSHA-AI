@@ -1,0 +1,440 @@
+/* ==========================================================================
+   SURAKSHA-AI Command Center View Styles
+   ========================================================================== */
+
+.command-center-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 1. Dominant Current Situation Banner */
+.situation-banner {
+  border-radius: var(--radius-md);
+  padding: 24px 28px;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 24px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: all var(--transition-normal);
+}
+
+.situation-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 6px;
+  background-color: var(--hazard-normal);
+  transition: background-color var(--transition-normal);
+}
+
+.situation-banner.tier-normal::before {
+  background-color: var(--hazard-normal);
+}
+.situation-banner.tier-normal {
+  border-color: var(--hazard-normal-border);
+  background: linear-gradient(135deg, var(--bg-surface) 0%, var(--hazard-normal-bg) 100%);
+}
+
+.situation-banner.tier-alert::before {
+  background-color: var(--hazard-alert);
+}
+.situation-banner.tier-alert {
+  border-color: var(--hazard-alert-border);
+  background: linear-gradient(135deg, var(--bg-surface) 0%, var(--hazard-alert-bg) 100%);
+}
+
+.situation-banner.tier-warning::before {
+  background-color: var(--hazard-warning);
+}
+.situation-banner.tier-warning {
+  border-color: var(--hazard-warning-border);
+  background: linear-gradient(135deg, var(--bg-surface) 0%, var(--hazard-warning-bg) 100%);
+}
+
+.situation-banner.tier-severe::before {
+  background-color: var(--hazard-severe);
+}
+.situation-banner.tier-severe {
+  border-color: var(--hazard-severe-border);
+  background: linear-gradient(135deg, var(--bg-surface) 0%, var(--hazard-severe-bg) 100%);
+}
+
+.situation-lead {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.situation-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.situation-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.situation-basin-tag {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.situation-status-display {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-top: 4px;
+  flex-wrap: wrap;
+}
+
+.situation-tier-text {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+}
+
+.tier-normal .situation-tier-text { color: var(--hazard-normal); }
+.tier-alert .situation-tier-text { color: var(--hazard-alert); }
+.tier-warning .situation-tier-text { color: var(--hazard-warning); }
+.tier-severe .situation-tier-text { color: var(--hazard-severe); }
+
+.situation-quick-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+  margin-top: 6px;
+}
+
+/* 2. Situation Banner Prediction Panel */
+.situation-crest-highlight {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.crest-stat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: var(--bg-surface-elevated);
+  border: 1px solid var(--border-medium);
+  padding: 12px 18px;
+  border-radius: var(--radius-sm);
+  min-width: 150px;
+  flex: 1;
+}
+
+.crest-stat-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.crest-stat-val {
+  font-size: 1.75rem;
+  font-weight: 800;
+  font-family: var(--font-mono);
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-top: 2px;
+}
+
+.crest-stat-unit {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.crest-stat-sub {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+/* Operational Two-Column Grid */
+.cc-grid-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* 3. AI Situation Assessment Box */
+.ai-summary-text {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background-color: var(--bg-secondary);
+  border-left: 3px solid var(--color-brand);
+  padding: 14px 18px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin-bottom: 16px;
+}
+
+/* 4. Recommended Actions Panel */
+.decision-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.decision-verdict-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background-color: var(--bg-surface-elevated);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-medium);
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.decision-verdict-title {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.decision-verdict-val {
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--text-primary);
+}
+
+.decision-reason-block {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+}
+
+.decision-reason-title {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 3px;
+  font-size: 0.84rem;
+}
+
+.decision-directives-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.decision-directives-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.decision-directives-list li {
+  font-size: 0.84rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background-color: var(--bg-secondary);
+  padding: 9px 12px;
+  border-radius: var(--radius-sm);
+  border-left: 2px solid var(--border-medium);
+  line-height: 1.4;
+}
+
+.decision-bullet-icon {
+  color: var(--color-brand);
+  flex-shrink: 0;
+  margin-top: 2px;
+  font-size: 0.8rem;
+}
+
+/* Benchmark Stage Comparisons */
+.benchmarks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.benchmark-stat-item {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+}
+
+.benchmark-stat-title {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.benchmark-stat-val {
+  font-size: 0.95rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 4px;
+}
+
+.status-breached {
+  color: var(--hazard-severe) !important;
+}
+
+.status-safe {
+  color: var(--hazard-normal) !important;
+}
+
+/* 5. Risk Assessment (Probability Distribution) */
+.probabilities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.prob-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.prob-label-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.prob-bar-track {
+  width: 100%;
+  height: 8px;
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+}
+
+.prob-bar-fill {
+  height: 100%;
+  border-radius: var(--radius-sm);
+  transition: width 400ms ease;
+}
+
+.fill-normal { background-color: var(--hazard-normal); }
+.fill-alert { background-color: var(--hazard-alert); }
+.fill-warning { background-color: var(--hazard-warning); }
+.fill-severe { background-color: var(--hazard-severe); }
+
+/* 6. Current Conditions Considered Strip */
+.inputs-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.input-summary-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.input-summary-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.input-summary-val {
+  font-size: 1.15rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--text-primary);
+  margin-top: 3px;
+}
+
+.input-summary-unit {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN BREAKPOINTS - COMMAND CENTER
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .cc-grid-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .situation-banner {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 18px;
+  }
+
+  .situation-crest-highlight {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .situation-tier-text {
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .situation-crest-highlight {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .crest-stat-box {
+    width: 100%;
+  }
+
+  .benchmarks-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .inputs-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 400px) {
+  .inputs-summary-grid {
+    grid-template-columns: 1fr;
+  }
+}

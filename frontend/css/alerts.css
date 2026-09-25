@@ -1,0 +1,178 @@
+/* ==========================================================================
+   SURAKSHA-AI Alerts View Styles
+   NDMA CAP-SACHET Emergency Alert Center
+   ========================================================================== */
+
+.alerts-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Alert Output Card */
+.sachet-broadcast-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 22px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+.sachet-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 14px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.sachet-protocol-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.sachet-logo-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--hazard-alert);
+  flex-shrink: 0;
+}
+
+.sachet-titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.sachet-main-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.sachet-sub-title {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+
+.sachet-meta-pills {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cap-id-pill {
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  padding: 3px 10px;
+  border-radius: var(--radius-sm);
+}
+
+/* Language Selector */
+.alert-language-selector {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--bg-secondary);
+  padding: 4px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+  width: fit-content;
+  flex-wrap: wrap;
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.lang-btn:hover {
+  color: var(--text-primary);
+}
+
+.lang-btn.active {
+  background-color: var(--bg-surface-elevated);
+  color: var(--text-primary);
+  border: 1px solid var(--border-medium);
+}
+
+/* Alert Message Display Box */
+.alert-message-display-box {
+  background-color: var(--bg-secondary);
+  border-left: 4px solid var(--hazard-normal);
+  padding: 20px 24px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  min-height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: border-color var(--transition-normal);
+}
+
+.alert-message-display-box.tier-normal { border-left-color: var(--hazard-normal); }
+.alert-message-display-box.tier-alert { border-left-color: var(--hazard-alert); }
+.alert-message-display-box.tier-warning { border-left-color: var(--hazard-warning); }
+.alert-message-display-box.tier-severe { border-left-color: var(--hazard-severe); }
+
+.alert-message-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* SACHET Disclaimer Note */
+.sachet-audit-note {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 12px;
+  line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+  .sachet-broadcast-card {
+    padding: 16px;
+  }
+
+  .alert-message-display-box {
+    padding: 14px 16px;
+  }
+
+  .alert-message-text {
+    font-size: 0.92rem;
+  }
+}

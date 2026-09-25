@@ -1,0 +1,126 @@
+/* ==========================================================================
+   SURAKSHA-AI Design Tokens & Theme Palettes
+   Operational Disaster Intelligence Theme (Dark Command Center & Clean Bright)
+   ========================================================================== */
+
+/* Dark Mode (Default Command-Center Aesthetic) */
+:root,
+[data-theme="dark"] {
+  --theme-mode: 'dark';
+
+  /* Surface & Background Hierarchy */
+  --bg-primary: #0a0e17;
+  --bg-secondary: #0f172a;
+  --bg-surface: #141e33;
+  --bg-surface-elevated: #1a2744;
+  --bg-overlay: rgba(10, 14, 23, 0.88);
+  --bg-input: #0f172a;
+
+  /* Border & Dividers */
+  --border-subtle: #1e293b;
+  --border-medium: #334155;
+  --border-accent: #3b82f6;
+
+  /* Typography Colors */
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-inverse: #0a0e17;
+
+  /* Card Shadows */
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  --card-shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.35);
+
+  /* Hazard Tier System (CWC Benchmarks) */
+  --hazard-normal: #10b981;
+  --hazard-normal-bg: rgba(16, 185, 129, 0.12);
+  --hazard-normal-border: rgba(16, 185, 129, 0.35);
+
+  --hazard-alert: #f59e0b;
+  --hazard-alert-bg: rgba(245, 158, 11, 0.12);
+  --hazard-alert-border: rgba(245, 158, 11, 0.35);
+
+  --hazard-warning: #f97316;
+  --hazard-warning-bg: rgba(249, 115, 22, 0.12);
+  --hazard-warning-border: rgba(249, 115, 22, 0.35);
+
+  --hazard-severe: #ef4444;
+  --hazard-severe-bg: rgba(239, 68, 68, 0.14);
+  --hazard-severe-border: rgba(239, 68, 68, 0.4);
+
+  /* Operational Brand Accent */
+  --color-brand: #38bdf8;
+  --color-brand-dim: rgba(56, 189, 248, 0.15);
+  --color-brand-border: rgba(56, 189, 248, 0.3);
+
+  /* Typography */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Roboto Mono', Consolas, monospace;
+
+  /* Spacing Scale */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+
+  /* Border Radii */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+}
+
+/* Bright Mode (Clean Professional Daylight Theme) */
+[data-theme="bright"] {
+  --theme-mode: 'bright';
+
+  /* Surface & Background Hierarchy */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --bg-surface: #ffffff;
+  --bg-surface-elevated: #f8fafc;
+  --bg-overlay: rgba(15, 23, 42, 0.6);
+  --bg-input: #ffffff;
+
+  /* Border & Dividers */
+  --border-subtle: #e2e8f0;
+  --border-medium: #cbd5e1;
+  --border-accent: #2563eb;
+
+  /* Typography Colors */
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --text-inverse: #ffffff;
+
+  /* Card Shadows */
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --card-shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  /* Hazard Tier System (Optimized for High Contrast on Light Backgrounds) */
+  --hazard-normal: #059669;
+  --hazard-normal-bg: rgba(5, 150, 105, 0.1);
+  --hazard-normal-border: rgba(5, 150, 105, 0.35);
+
+  --hazard-alert: #d97706;
+  --hazard-alert-bg: rgba(217, 119, 6, 0.12);
+  --hazard-alert-border: rgba(217, 119, 6, 0.35);
+
+  --hazard-warning: #ea580c;
+  --hazard-warning-bg: rgba(234, 88, 12, 0.12);
+  --hazard-warning-border: rgba(234, 88, 12, 0.35);
+
+  --hazard-severe: #dc2626;
+  --hazard-severe-bg: rgba(220, 38, 38, 0.12);
+  --hazard-severe-border: rgba(220, 38, 38, 0.4);
+
+  /* Operational Brand Accent */
+  --color-brand: #0284c7;
+  --color-brand-dim: rgba(2, 132, 199, 0.12);
+  --color-brand-border: rgba(2, 132, 199, 0.3);
+}

@@ -1,0 +1,391 @@
+/* ==========================================================================
+   SURAKSHA-AI Analyze View Styles
+   ========================================================================== */
+
+.analyze-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Test Scenario Selector Bar */
+.test-scenario-container {
+  background-color: var(--bg-surface);
+  border: 1px dashed var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: var(--card-shadow);
+}
+
+.test-scenario-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.test-scenario-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.test-scenario-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  background: var(--hazard-alert-bg);
+  color: var(--hazard-alert);
+  border: 1px solid var(--hazard-alert-border);
+}
+
+.test-scenario-desc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.test-preset-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.preset-btn {
+  background-color: var(--bg-surface-elevated);
+  border: 1px solid var(--border-medium);
+  color: var(--text-primary);
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.preset-btn:hover {
+  background-color: var(--bg-secondary);
+  border-color: var(--color-brand);
+}
+
+.preset-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.dot-normal { background-color: var(--hazard-normal); }
+.dot-alert { background-color: var(--hazard-alert); }
+.dot-warning { background-color: var(--hazard-warning); }
+.dot-severe { background-color: var(--hazard-severe); }
+
+/* Parameter Input Groups Grid */
+.input-groups-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.input-group-full {
+  grid-column: span 2;
+}
+
+.param-fields-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.param-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.param-label-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.param-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.param-unit-tag {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  background: var(--bg-secondary);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+}
+
+.param-input {
+  width: 100%;
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-medium);
+  color: var(--text-primary);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  font-family: var(--font-mono);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.param-input:focus {
+  outline: none;
+  border-color: var(--color-brand);
+  box-shadow: 0 0 0 2px var(--color-brand-dim);
+}
+
+.param-select {
+  width: 100%;
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-medium);
+  color: var(--text-primary);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: border-color var(--transition-fast);
+}
+
+.param-select:focus {
+  outline: none;
+  border-color: var(--color-brand);
+}
+
+.param-helper-text {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  line-height: 1.25;
+}
+
+/* Primary Execution Bar */
+.analyze-action-bar {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  box-shadow: var(--card-shadow);
+}
+
+.analyze-action-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.analyze-action-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.analyze-action-sub {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+
+.btn-analyze-execute {
+  background: linear-gradient(135deg, #1d4ed8, #2563eb);
+  border: 1px solid #3b82f6;
+  color: #ffffff;
+  padding: 12px 28px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+  transition: all var(--transition-fast);
+}
+
+.btn-analyze-execute:hover {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  transform: translateY(-1px);
+}
+
+.btn-analyze-execute:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* AI Analysis Workflow Modal */
+.workflow-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: var(--bg-overlay);
+  backdrop-filter: blur(4px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+}
+
+.workflow-modal-overlay.active {
+  display: flex;
+}
+
+.workflow-modal-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 28px 32px;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.workflow-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 12px;
+}
+
+.workflow-modal-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.workflow-steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.workflow-step-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 12px;
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-fast);
+}
+
+.workflow-step-item.pending {
+  opacity: 0.45;
+}
+
+.workflow-step-item.active {
+  opacity: 1;
+  border-color: var(--color-brand);
+  background-color: var(--bg-surface-elevated);
+}
+
+.workflow-step-item.completed {
+  opacity: 0.9;
+  border-color: var(--hazard-normal-border);
+}
+
+.workflow-step-icon {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  border-radius: 50%;
+  background: var(--bg-surface);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.workflow-step-item.active .workflow-step-icon {
+  color: var(--color-brand);
+}
+
+.workflow-step-item.completed .workflow-step-icon {
+  color: var(--hazard-normal);
+}
+
+.workflow-step-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Error Banner in Form */
+.form-error-banner {
+  background-color: var(--hazard-severe-bg);
+  border: 1px solid var(--hazard-severe-border);
+  color: var(--hazard-severe);
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.84rem;
+  display: none;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-error-banner.active {
+  display: flex;
+}
+
+/* Responsive Grid for Analyze Form */
+@media (max-width: 960px) {
+  .input-groups-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .input-group-full {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .param-fields-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .analyze-action-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-analyze-execute {
+    width: 100%;
+    justify-content: center;
+  }
+}

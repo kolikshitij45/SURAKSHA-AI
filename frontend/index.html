@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SURAKSHA-AI | AI Disaster Intelligence & Response Agent</title>
+  <meta name="description" content="SURAKSHA-AI: AI Disaster Intelligence & Response Agent for the Mahanadi River Basin (Odisha, India). Real-time flood crest prediction, CWC benchmark tracking, civil response directives, and NDMA CAP-SACHET multi-lingual emergency broadcasting.">
+
+  <!-- Modern Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Core & Component Stylesheets -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/command-center.css">
+  <link rel="stylesheet" href="css/analyze.css">
+  <link rel="stylesheet" href="css/situation.css">
+  <link rel="stylesheet" href="css/response.css">
+  <link rel="stylesheet" href="css/alerts.css">
+  <link rel="stylesheet" href="css/history.css">
+</head>
+<body>
+
+  <!-- Operational App Header -->
+  <header class="app-header">
+    <div class="brand-section">
+      <div class="brand-badge-icon" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        </svg>
+      </div>
+
+      <div class="brand-title-wrap">
+        <h1 class="brand-name">
+          SURAKSHA-AI
+          <span class="brand-tag">AGENT</span>
+        </h1>
+        <span class="brand-subtitle">AI Disaster Intelligence & Response Agent</span>
+      </div>
+
+      <div class="basin-location">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        <span>Mahanadi River Basin • Mundali Barrage</span>
+      </div>
+    </div>
+
+    <!-- Right Header: Hazard Badge, Navigation, Theme Toggle, & Mobile Menu -->
+    <div class="header-actions">
+      <span id="header-hazard-badge" class="hazard-badge normal" style="display: none;">
+        NORMAL
+      </span>
+
+      <!-- Primary Navigation -->
+      <nav class="app-nav" id="app-nav" aria-label="Operational Navigation">
+        <button type="button" class="nav-item active" data-tab="command-center" id="nav-btn-command-center">
+          COMMAND CENTER
+        </button>
+        <button type="button" class="nav-item" data-tab="analyze" id="nav-btn-analyze">
+          ANALYZE
+        </button>
+        <button type="button" class="nav-item" data-tab="situation" id="nav-btn-situation">
+          SITUATION
+        </button>
+        <button type="button" class="nav-item" data-tab="response" id="nav-btn-response">
+          RESPONSE
+        </button>
+        <button type="button" class="nav-item" data-tab="alerts" id="nav-btn-alerts">
+          ALERTS
+        </button>
+        <button type="button" class="nav-item" data-tab="history" id="nav-btn-history">
+          HISTORY
+        </button>
+      </nav>
+
+      <!-- Theme Switcher Button -->
+      <button type="button" class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Bright/Dark Theme" title="Toggle Bright/Dark Theme">
+        <span id="theme-toggle-icon" aria-hidden="true">☀</span>
+      </button>
+
+      <!-- Mobile Hamburger Button -->
+      <button type="button" class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Navigation Menu" title="Menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main View Container -->
+  <main class="app-main">
+    <div id="view-container">
+      <!-- Views are dynamically injected by AppRouter -->
+    </div>
+  </main>
+
+  <!-- Application Logic -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
